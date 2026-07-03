@@ -1,0 +1,315 @@
+/**
+ * WooCommerce Product Profit Calculator — Admin styles.
+ *
+ * @package WC_Product_Profit
+ */
+
+/* ── Summary card (product edit screen) ─────────────────────────────── */
+
+.wcpp-summary {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+	padding: 16px;
+	margin: 12px 0 8px;
+	clear: both;
+	transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.wcpp-summary:hover {
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+	border-color: #cbd5e1;
+}
+
+.wcpp-summary--variation {
+	margin-top: 8px;
+	margin-bottom: 4px;
+}
+
+.wcpp-summary__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 14px;
+	gap: 8px;
+}
+
+.wcpp-summary__title {
+	font-size: 13px;
+	font-weight: 600;
+	color: #1e293b;
+	letter-spacing: 0.01em;
+}
+
+.wcpp-summary__badge {
+	font-size: 11px;
+	font-weight: 600;
+	padding: 3px 10px;
+	border-radius: 999px;
+	background: #f1f5f9;
+	color: #64748b;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.wcpp-summary__badge--positive {
+	background: rgba(34, 197, 94, 0.12);
+	color: #16a34a;
+}
+
+.wcpp-summary__badge--zero {
+	background: rgba(245, 158, 11, 0.12);
+	color: #d97706;
+}
+
+.wcpp-summary__badge--negative {
+	background: rgba(239, 68, 68, 0.12);
+	color: #dc2626;
+}
+
+.wcpp-summary__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 12px;
+}
+
+/* ── Metric cards ─────────────────────────────────────────────────────── */
+
+.wcpp-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	background: #ffffff;
+	border: 1px solid #f1f5f9;
+	border-radius: 12px;
+	padding: 16px;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.wcpp-card:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+	border-color: #e2e8f0;
+}
+
+.wcpp-card__icon {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	background: #f8fafc;
+	color: #64748b;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.wcpp-card--profit .wcpp-card__icon { color: #22c55e; background: rgba(34, 197, 94, 0.1); }
+.wcpp-card--markup .wcpp-card__icon { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+.wcpp-card--margin .wcpp-card__icon { color: #8b5cf6; background: rgba(139, 92, 246, 0.1); }
+
+.wcpp-card__body {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+}
+
+.wcpp-card__label {
+	font-size: 12px;
+	font-weight: 500;
+	color: #64748b;
+	line-height: 1.3;
+}
+
+.wcpp-card__value {
+	font-size: 18px;
+	font-weight: 700;
+	color: #0f172a;
+	line-height: 1.2;
+	word-break: break-word;
+	transition: color 0.2s ease;
+}
+
+.wcpp-card__value--positive { color: #22c55e; }
+.wcpp-card__value--zero     { color: #f59e0b; }
+.wcpp-card__value--negative { color: #ef4444; }
+
+/* ── Cost field spacing ─────────────────────────────────────────────── */
+
+.wcpp-cost-field {
+	margin-top: 4px !important;
+}
+
+/* ── Product list columns ───────────────────────────────────────────── */
+
+.wcpp-col-empty {
+	color: #94a3b8;
+}
+
+.wcpp-col-value {
+	font-variant-numeric: tabular-nums;
+}
+
+/* ── Settings page ──────────────────────────────────────────────────── */
+
+.wcpp-settings-wrap {
+	max-width: 780px;
+}
+
+.wcpp-settings-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 23px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.wcpp-settings-title .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+	color: #2271b1;
+}
+
+.wcpp-settings-form {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+	padding: 20px 24px 8px;
+}
+
+.wcpp-settings-form .form-table th {
+	padding-left: 0;
+	font-weight: 600;
+	color: #1e293b;
+}
+
+.wcpp-settings-form .form-table td {
+	padding-left: 0;
+}
+
+.wcpp-settings-form .submit {
+	padding-left: 0;
+	margin-top: 8px;
+}
+
+/* ── About page ─────────────────────────────────────────────────────── */
+
+.wcpp-about-wrap {
+	max-width: 720px;
+	margin-top: 20px;
+}
+
+.wcpp-about-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+	padding: 32px;
+	text-align: center;
+}
+
+.wcpp-about-card__logo {
+	margin-bottom: 16px;
+}
+
+.wcpp-about-card__title {
+	font-size: 24px;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0 0 6px;
+}
+
+.wcpp-about-card__version {
+	font-size: 14px;
+	color: #64748b;
+	margin: 0 0 16px;
+}
+
+.wcpp-about-card__desc {
+	font-size: 15px;
+	color: #475569;
+	line-height: 1.6;
+	margin: 0 0 24px;
+}
+
+.wcpp-about-card__meta {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 16px;
+	text-align: left;
+	padding: 20px;
+	background: #f8fafc;
+	border-radius: 12px;
+	margin-bottom: 24px;
+}
+
+.wcpp-about-meta-item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.wcpp-about-meta-item strong {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: #64748b;
+}
+
+.wcpp-about-meta-item span,
+.wcpp-about-meta-item a {
+	font-size: 14px;
+	color: #1e293b;
+}
+
+.wcpp-about-card__features {
+	text-align: left;
+}
+
+.wcpp-about-card__features h2 {
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 12px;
+	color: #1e293b;
+}
+
+.wcpp-about-card__features ul {
+	margin: 0;
+	padding-left: 20px;
+	color: #475569;
+	line-height: 1.8;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────── */
+
+@media screen and (max-width: 782px) {
+	.wcpp-summary__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wcpp-card__value {
+		font-size: 16px;
+	}
+
+	.wcpp-about-card {
+		padding: 20px;
+	}
+
+	.wcpp-settings-form {
+		padding: 16px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.wcpp-summary__header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
